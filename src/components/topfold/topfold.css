@@ -1,0 +1,44 @@
+.home-topfold {
+  justify-content: space-between;
+  display: flex;
+  margin: auto;
+  width: 70%;
+}
+.searchbar {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 50%;
+  padding: 5px 0px;
+  background: white;
+}
+.searchbar i {
+  font-size: 12px;
+  margin-left: 5px;
+}
+.searchbar input {
+  margin-left: 5px;
+
+  outline: none;
+  border: none;
+}
+
+.btn {
+  border: 1px solid black;
+  border-radius: 8px;
+
+  padding: 5px 5px 5px 3px;
+  width: max-content;
+  cursor: pointer;
+}
+
+.add-topfold {
+  justify-content: space-between;
+  display: flex;
+  margin: auto;
+  width: 70%;
+}
+
+.btn-add-topfold button {
+  background: none;
+  border: none;
+}

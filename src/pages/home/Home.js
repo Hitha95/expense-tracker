@@ -1,10 +1,12 @@
+import ExpenseList from "../../components/expense-list/ExpenseList";
+import Topfold from "../../components/topfold/Topfold";
 import "./home.css";
 
 const Home = () => {
   return (
     <div className="home">
-      <div>top</div>
-      <div>expenseList</div>
+      <Topfold />
+      <ExpenseList />
     </div>
   );
 };

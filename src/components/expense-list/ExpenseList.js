@@ -5,8 +5,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ExpenseList = () => {
-  const { expenseList } = useSelector((state) => state.expenses);
+  const { expenseList, str } = useSelector((state) => state.expenses);
   const notify = () => toast.error("Expense Deleted!");
+  const filteredList = expenseList.filter((item) => {
+    return item.title.toLowerCase().includes(str.toLowerCase());
+  });
+
   return (
     <div className="expense-list-container">
       <ToastContainer
@@ -17,7 +21,7 @@ const ExpenseList = () => {
         closeOnClick
         className="toast"
       />
-      {expenseList.map((item, i) => {
+      {filteredList.map((item, i) => {
         return <ExpenseCard item={item} key={item.id} notifyDelete={notify} />;
       })}
     </div>

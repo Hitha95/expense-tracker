@@ -1,4 +1,8 @@
-import { ADD_EXPENSE, DELETE_EXPENSE } from "../action-types/expenses";
+import {
+  ADD_EXPENSE,
+  DELETE_EXPENSE,
+  SEARCH_EXPENSE,
+} from "../action-types/expenses";
 
 const initialList = () => {
   const list = localStorage.getItem("expense-list");
@@ -11,6 +15,7 @@ const initialList = () => {
 
 const initialState = {
   expenseList: initialList(),
+  str: "",
 };
 
 export const expenseReducer = (state = initialState, { type, payload }) => {
@@ -33,6 +38,9 @@ export const expenseReducer = (state = initialState, { type, payload }) => {
         ...state,
         expenseList: updatedList,
       };
+    }
+    case SEARCH_EXPENSE: {
+      return { ...state, str: payload };
     }
     default:
       return state;

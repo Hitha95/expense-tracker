@@ -1,10 +1,16 @@
 import "./topfold.css";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { searchExpense } from "../../redux/actions/expenses";
 
 const Topfold = () => {
   const [search, setSearch] = useState("");
-
+  const dispatch = useDispatch();
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+    dispatch(searchExpense(e.target.value));
+  };
   return (
     <div className="topfold-container">
       {window.location.pathname === "/" ? (
@@ -15,9 +21,7 @@ const Topfold = () => {
               type="text"
               placeholder="search for expenses"
               value={search}
-              onChange={(e) => {
-                setSearch(e.target.value);
-              }}
+              onChange={(e) => handleSearch(e)}
             />
           </div>
 

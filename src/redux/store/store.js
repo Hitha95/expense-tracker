@@ -1,5 +1,6 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import { expenseReducer } from "../reducers/expenses";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 const reducer = combineReducers({
   expenses: expenseReducer,
@@ -7,6 +8,10 @@ const reducer = combineReducers({
 
 const initialState = {};
 
-const store = createStore(reducer, initialState);
+const store = createStore(
+  reducer,
+  initialState,
+  composeWithDevTools(applyMiddleware())
+);
 
 export default store;

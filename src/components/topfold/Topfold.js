@@ -20,13 +20,14 @@ const Topfold = () => {
               }}
             />
           </div>
-          <Link to="/add-expense">
-            <div className="btn-add">
+
+          <div className="btn-add">
+            <Link to="/add-expense">
               <button className="btn">
                 <i class="fi fi-rr-plus-small"></i>Add
               </button>
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
       ) : (
         <div className="add-topfold">

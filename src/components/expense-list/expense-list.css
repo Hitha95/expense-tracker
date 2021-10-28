@@ -1,0 +1,16 @@
+.expense-list-container {
+  margin: 0;
+  height: 60vh;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(80, 136, 158);
+}

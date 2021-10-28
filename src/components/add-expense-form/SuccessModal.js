@@ -20,14 +20,20 @@ const SuccessModal = ({ modalIsOpen, closeModal }) => {
   return (
     <Modal isOpen={modalIsOpen} style={customStyles}>
       <div className="modal-container">
-        <label>Expense added successfully</label>
+        <div className="modal-cancel" onClick={closeModal}>
+          <Link to="/add-expense">
+            <i class="fi fi-rr-cross-circle"></i>
+          </Link>
+        </div>
+
+        <label>Expense added successfully!</label>
         <img
           src={require("../../data/images/modal-added-image.png").default}
           alt="success modal"
           className="success-image"
         />
 
-        <div className="btn-home btn flex-center" onClick={closeModal()}>
+        <div className="btn-home btn flex-center" onClick={closeModal}>
           <Link to="/">Home</Link>
         </div>
       </div>

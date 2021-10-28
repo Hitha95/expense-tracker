@@ -1,6 +1,7 @@
 .expense-list-container {
   margin: 0;
-  height: 60vh;
+  height: 65vh;
+  width: 100%;
   overflow-y: scroll;
 }
 ::-webkit-scrollbar {
@@ -13,4 +14,8 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(80, 136, 158);
+}
+
+.toast {
+  font-size: 12px;
 }

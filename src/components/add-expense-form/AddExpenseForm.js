@@ -51,7 +51,7 @@ const AddExpenseForm = () => {
       createdAt: new Date(),
     };
     dispatch(addExpense(data));
-    //setModalIsOpen(true);
+    setModalIsOpen(true);
     setTitle("");
     setAmount("");
     setCategory();

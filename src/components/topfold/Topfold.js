@@ -38,11 +38,11 @@ const Topfold = () => {
               </button>
             </Link>
           </div>
-          <div className="btn-add-topfold">
+          {/* <div className="btn-add-topfold">
             <button className="btn">
               <i class="fi fi-rr-cross-small"></i>Cancel
             </button>
-          </div>
+          </div> */}
         </div>
       )}
     </div>

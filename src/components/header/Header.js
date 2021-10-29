@@ -5,7 +5,7 @@ const Header = () => {
     <div className="header-container">
       <div className="header-logo flex-center">Xpense tracker</div>
       <div className="header-logo-icon flex-center">
-        <i class="fi fi-rr-credit-card"></i>
+        <i className="fi fi-rr-credit-card"></i>
       </div>
     </div>
   );

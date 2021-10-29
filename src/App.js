@@ -3,6 +3,7 @@ import Home from "./pages/home/Home";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import AddExpense from "./pages/add-expense/AddExpense";
 import { useSelector } from "react-redux";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   const expenses = useSelector((state) => state.expenses);
@@ -15,7 +16,7 @@ const App = () => {
         <Route path="/add-expense" exact component={AddExpense} />
       </Switch>
 
-      <div>footer</div>
+      <Footer />
     </BrowserRouter>
   );
 };

@@ -1,10 +1,10 @@
 import "./expense-card.css";
 import { useDispatch } from "react-redux";
 import { deleteExpense } from "../../redux/actions/expenses";
+import moment from "moment";
 
 const ExpenseCard = ({ item, notifyDelete }) => {
-  // const time = item.createdAt;
-  console.log(item.id);
+  const time = moment(item.createdAt).fromNow();
   const dispatch = useDispatch();
   const handleDelete = (id) => {
     /*const confirm = window.confirm(`are u sure ? ${id}`);
@@ -20,7 +20,7 @@ const ExpenseCard = ({ item, notifyDelete }) => {
       </div>
       <div className="card-title">
         <label>{item.title}</label>
-        <label>{item.title}</label>
+        <p className="card-time">{time}</p>
         {/* <label>{time}</label> */}
       </div>
       <div className="card-right">
@@ -30,7 +30,7 @@ const ExpenseCard = ({ item, notifyDelete }) => {
             handleDelete(item.id);
           }}
         >
-          <i class="fi fi-rr-trash"></i>
+          <i className="fi fi-rr-trash"></i>
         </div>
         <div className="card-amount">₹{item.amount}</div>
       </div>

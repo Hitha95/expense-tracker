@@ -1,0 +1,26 @@
+.footer-container {
+  position: fixed;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.img-copyright {
+  width: max-content;
+  margin: 0;
+  padding-right: 5px;
+}
+
+.footer-logo {
+  font-size: 1rem;
+  width: max-content;
+  margin: 0;
+}
+.footer-logo-icon {
+  width: max-content;
+  margin: 0;
+}

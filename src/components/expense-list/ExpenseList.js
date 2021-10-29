@@ -21,9 +21,21 @@ const ExpenseList = () => {
         closeOnClick
         className="toast"
       />
-      {filteredList.map((item, i) => {
-        return <ExpenseCard item={item} key={item.id} notifyDelete={notify} />;
-      })}
+      {filteredList.length > 0 ? (
+        filteredList.map((item, i) => {
+          return (
+            <ExpenseCard item={item} key={item.id} notifyDelete={notify} />
+          );
+        })
+      ) : (
+        <div className="img-empty-list">
+          <label>Its empty in here!</label>
+          <img
+            src={require("../../data/images/empty.png").default}
+            alt="Its empty in here!"
+          />
+        </div>
+      )}
     </div>
   );
 };

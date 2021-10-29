@@ -22,7 +22,7 @@ const SuccessModal = ({ modalIsOpen, closeModal }) => {
       <div className="modal-container">
         <div className="modal-cancel" onClick={closeModal}>
           <Link to="/add-expense">
-            <i class="fi fi-rr-cross-circle"></i>
+            <i className="fi fi-rr-cross-circle"></i>
           </Link>
         </div>
 

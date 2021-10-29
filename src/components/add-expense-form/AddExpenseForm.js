@@ -90,7 +90,7 @@ const AddExpenseForm = () => {
             onClick={() => setCategoryOpen(!categoryOpen)}
           >
             <label>{category ? category.title : "Category"}</label>
-            <i class="fi-rr-angle-down"></i>
+            <i className="fi-rr-angle-down"></i>
           </div>
           {categoryOpen && (
             <div className="category-container">
@@ -111,7 +111,7 @@ const AddExpenseForm = () => {
       <div className="btn-add-form btn">
         <div onClick={handleSubmit}>
           <label>Add</label>
-          <i class="fi-rr-paper-plane flex-center"></i>
+          <i className="fi-rr-paper-plane flex-center"></i>
         </div>
       </div>
     </div>

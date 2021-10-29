@@ -29,9 +29,7 @@ export const expenseReducer = (state = initialState, { type, payload }) => {
     }
     case DELETE_EXPENSE: {
       let updatedList = state.expenseList.filter((prod) => {
-        if (prod.id !== payload) {
-          return prod;
-        }
+        return prod.id !== payload;
       });
       localStorage.setItem("expense-list", JSON.stringify(updatedList));
       return {
